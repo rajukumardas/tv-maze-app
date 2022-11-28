@@ -7,6 +7,7 @@ import {
   SET_LOADING,
   SET_SINGLE_SHOW,
   CLEAR_SINGLE_SHOW,
+  CLEAR_STATE
 } from "../types";
 
 const ShowsState = (props) => {
@@ -32,6 +33,9 @@ const ShowsState = (props) => {
       payload: data,
     });
   };
+  const emptystate=async()=>{
+    dispatch({type:CLEAR_STATE})
+  }
 
   const getSingleShow = async (id) => {
     dispatch({
@@ -61,6 +65,7 @@ const ShowsState = (props) => {
         singleShow: state.singleShow,
         loading: state.loading,
         searchShows,
+        emptystate,
         getSingleShow,
         clearSingleShow,
       }}

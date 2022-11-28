@@ -1,7 +1,4 @@
 import { Link } from "react-router-dom";
-// import { BrowserRouter as Route } from "react-router-dom";
-// import HomePage from "./pages/Homepage";
-
 
 const Navbar = () => {
   return (
@@ -13,13 +10,7 @@ const Navbar = () => {
               <i className="fas fa-video"></i> TV MAZE
             </Link>
           </h3>
-          <ul className="nav__links">
-            <li className="links__link">
-              <Link to="/">HOME</Link>
-              
-            </li>
-          
-          </ul>
+         
         </nav>
       </div>
     </div>

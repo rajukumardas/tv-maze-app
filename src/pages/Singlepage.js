@@ -1,16 +1,19 @@
 import { useEffect, useContext } from "react";
-
+import { useParams } from "react-router-dom";
 // Context
 import ShowsContext from "../context/shows/showsContext";
 
 // Components
 import Loader from "../components/Loader";
 
-const Singlepage = ({ match }) => {
+const Singlepage = () => {
   const { getSingleShow, singleShow, loading } = useContext(ShowsContext);
-
+ const params=useParams()
+ const showsContext = useContext(ShowsContext);
+  const { loading:context, emptystate } = showsContext;
   useEffect(() => {
-    getSingleShow(match.params.id);
+    emptystate()
+    getSingleShow(params.id);
 
     // eslint-disable-next-line
   }, []);

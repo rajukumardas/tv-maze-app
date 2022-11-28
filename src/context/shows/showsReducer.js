@@ -3,6 +3,7 @@ import {
   SET_LOADING,
   SET_SINGLE_SHOW,
   CLEAR_SINGLE_SHOW,
+  CLEAR_STATE,
 } from "../types";
 
 const showsReducer = (state, action) => {
@@ -29,6 +30,11 @@ const showsReducer = (state, action) => {
         ...state,
         singleShow: {},
       };
+      case CLEAR_STATE:
+        return {
+          ...state,
+          shows:[]
+        }
     default:
       return state;
   }

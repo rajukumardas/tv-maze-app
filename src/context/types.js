@@ -7,3 +7,4 @@ export const CLEAR_SINGLE_SHOW = "CLEAR_SINGLE_SHOW";
 // Alerts
 export const SET_ALERT = "SET_ALERT";
 export const REMOVE_ALERT = "REMOVE_ALERT";
+export const CLEAR_STATE = "CLEAR_STATE";
